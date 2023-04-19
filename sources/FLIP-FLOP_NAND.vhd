@@ -2,16 +2,16 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 
-entity FLIP_FLOP is
+entity FLIP_FLOP_NAND is
     port(
         clk: in std_logic;
         rs: in std_logic_vector(1 downto 0);
         qo: out std_logic_vector(1 downto 0)
         
     );
-end FLIP_FLOP;
+end FLIP_FLOP_NAND;
 
-architecture Behavioral of FLIP_FLOP is
+architecture Behavioral of FLIP_FLOP_NAND is
 
 signal q: std_logic_vector(1 downto 0):="00";
 

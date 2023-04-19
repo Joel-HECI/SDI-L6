@@ -15,7 +15,7 @@ architecture Behavioral of testbench is
 
 begin
     
-    fp: entity work.FLIP_FLOP port map(
+    fp: entity work.FLIP_FLOP_NOR port map(
         
         clk=>clk,    
         rs=>rs_in,
@@ -38,14 +38,12 @@ begin
 end process;
 
 
-    process
-    begin
-        wait for 499 ms;
-        rs_in <= "01"; 
-    wait for 1000 ms;
-report "q: " & std_logic'image(q_out(1)) & std_logic'image(q_out(0));
+process
+begin
 
-rs_in <= "11"; 
+wait for 499 ms;
+
+rs_in <= "01"; 
 wait for 1000 ms;
 report "q: " & std_logic'image(q_out(1)) & std_logic'image(q_out(0));
 
@@ -55,6 +53,8 @@ report "q: " & std_logic'image(q_out(1)) & std_logic'image(q_out(0));
 
 rs_in <= "00"; 
 wait for 1000 ms;
+report "q: " & std_logic'image(q_out(1)) & std_logic'image(q_out(0));
+
 assert false report "Test Done." severity note;
     wait;
 
