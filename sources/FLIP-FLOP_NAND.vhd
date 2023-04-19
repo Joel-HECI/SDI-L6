@@ -26,27 +26,27 @@ begin
 -- 1	1	Memory
 
 -- Sin reloj
-    -- q<= "01" WHEN rs="01" ELSE
-    --     "10" WHEN rs="10" ELSE
-    --     q WHEN rs="11";
+    q<= "01" WHEN rs="01" ELSE
+        "10" WHEN rs="10" ELSE
+        q WHEN rs="11";
 
-    -- qo<=q;
+    qo<=q;
 
 -- con reloj
 
-    process (clk)
-    begin
-        if rising_edge(clk) then
+    -- process (clk)
+    -- begin
+    --     if rising_edge(clk) then
             
-            if rs="01" then 
-            q<="01";
-        elsif rs="10" then
-            q<="10";
-        elsif rs="11" then
-            q<=q;
-        end if;
-            end if;
-    end process;
-    qo<=q;
+    --         if rs="01" then 
+    --         q<="01";
+    --     elsif rs="10" then
+    --         q<="10";
+    --     elsif rs="11" then
+    --         q<=q;
+    --     end if;
+    --         end if;
+    -- end process;
+    -- qo<=q;
 
     end architecture;
