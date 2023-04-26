@@ -28,7 +28,8 @@ begin
 
     process (clk,d,ebl,rst)
     begin
-        if rising_edge(clk) and ebl='1' then
+    if rst='0' then
+        if (rising_edge(clk) and ebl='1') then
          
             if qa='0' and d='0' then
                 qa<='0';
@@ -38,11 +39,10 @@ begin
                 qa<='0';
             elsif qa='1' and d='1' then
                 qa<='1';
-            end if;
-        
-        elsif rising_edge(clk) and ebl='1' and rst='1' then
-            qa<='0';
-            
+            end if;            
+     end if;
+     else
+     qa<='0';
      end if;
     end process;
 

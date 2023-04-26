@@ -12,5 +12,20 @@ entity DIV_FREQ is
 end DIV_FREQ;
 
 architecture Behavioral of DIV_FREQ is
+begin
+    div_16K: entity work.DIV_16K port map(
+        clk=>clk, 
+        clk_o=>clk_16K);
 
+    div_1K: entity work.DIV_1K port map(
+        clk=>clk,
+        clk_o=>clk_1K);
+    
+    div_250: entity work.DIV_250 port map(
+        clk=>clk,
+        clk_o=>clk_250);
+    
+    div_125: entity work.DIV_125 port map(
+        clk=>clk,
+        clk_o=>clk_125);
     end architecture;
