@@ -1,0 +1,46 @@
+v 4
+file . "./Test/testbench-REG.vhd" "08f9426f9dddba3802e8de3351c970834bed7f54" "20230426170013.979":
+  entity testbench_reg at 1( 0) + 0 on 61;
+  architecture behavioral of testbench_reg at 7( 81) + 0 on 62;
+file . "./Register/SR_PAR-SER.vhd" "a2fab71785b0bf032328e5e9785bcb3e6826e920" "20230426170013.979":
+  entity sr_par_ser at 1( 0) + 0 on 59;
+  architecture behavioral of sr_par_ser at 13( 221) + 0 on 60;
+file . "mux2a1.vhd" "669830f1063232f031c426eaf0632e072be67c59" "20230426170013.979":
+  entity mux2a1 at 2( 1) + 0 on 57;
+  architecture arch_mux21 of mux2a1 at 14( 201) + 0 on 58;
+file . "./Test/testbench-DIV.vhd" "738d22d247ceed7cbf30042e3861347f6d05f131" "20230426154115.593":
+  entity testbench_div at 1( 0) + 0 on 53;
+  architecture behavioral of testbench_div at 7( 81) + 0 on 54;
+file . "./Divisores/DIV_16K.vhd" "30f05c013506955499ded35736fac66d02ee0a53" "20230426154115.593":
+  entity div_16k at 1( 0) + 0 on 51;
+  architecture behavioral of div_16k at 11( 150) + 0 on 52;
+file . "./Test/testbench-CONT.vhd" "caf10ae23732855d3c2f37fff8bfe71519230f86" "20230426034323.719":
+  entity testbench_cont at 1( 0) + 0 on 33;
+  architecture behavioral of testbench_cont at 7( 82) + 0 on 34;
+file . "./Contadores/Contador_DES.vhd" "f46fd9fcbce6c3b69296c3ecc69625f444c0e676" "20230426034323.719":
+  entity contador_des at 1( 0) + 0 on 31;
+  architecture contador_des of contador_des at 12( 179) + 0 on 32;
+file . "./Test/testbench-FPS.vhd" "a0dd3aeeaa08e243aba4f3c7620dd62f99289c55" "20230426020531.620":
+  entity testbench_fps at 1( 0) + 0 on 19;
+  architecture behavioral of testbench_fps at 8( 89) + 0 on 20;
+file . "div_freq.vhd" "568f253e3069a3fc3b6722219d8c5367169ccf4d" "20230426020531.497":
+  entity divisor_frecuencia at 1( 0) + 0 on 4;
+  architecture behavioral of divisor_frecuencia at 11( 182) + 0 on 4;
+file . "./FLIP-FLOPS/FLIP-FLOP_JK.vhd" "9130dc9141d2a271f3a9ba6949f875b44fc971d3" "20230426020531.620":
+  entity flip_flop_jk at 1( 0) + 0 on 13;
+  architecture behavioral of flip_flop_jk at 14( 217) + 0 on 14;
+file . "./FLIP-FLOPS/FLIP-FLOP_T.vhd" "76f77eba051ed2b05b17a26d6ba276053d157b95" "20230426020531.620":
+  entity flip_flop_t at 1( 0) + 0 on 17;
+  architecture behavioral of flip_flop_t at 14( 213) + 0 on 18;
+file . "./FLIP-FLOPS/FLIP-FLOP_D.vhd" "f80e82029b46be8d9dc206a954acf63b7f691c71" "20230426170013.978":
+  entity flip_flop_d at 1( 0) + 0 on 55;
+  architecture behavioral of flip_flop_d at 14( 213) + 0 on 56;
+file . "./FLIP-FLOPS/FLIP-FLOP_NAND.vhd" "54347a985cd232154c53d6dd60c6643346c2ad90" "20230426020531.619":
+  entity flip_flop_nand at 1( 0) + 0 on 11;
+  architecture behavioral of flip_flop_nand at 14( 221) + 0 on 12;
+file . "./Contadores/Contador_AS.vhd" "ebd6410b27e994eba48925a5c84d004fd1b986c2" "20230426034323.719":
+  entity contador_as at 1( 0) + 0 on 29;
+  architecture contador_as of contador_as at 12( 178) + 0 on 30;
+file . "./Test/testbench-CONT_AS.vhd" "eeb1ba857738e21fcb971cdf07cd2557ed7ae0ad" "20230426032613.140":
+  entity testbench_cont_as at 1( 0) + 0 on 25;
+  architecture behavioral of testbench_cont_as at 7( 85) + 0 on 26;

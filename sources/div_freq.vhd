@@ -10,7 +10,9 @@ end Divisor_frecuencia;
 
 architecture Behavioral of Divisor_frecuencia is
 
-signal Divisor : integer range 0 to 100;
+    
+constant freq_counter : integer := 2e8; -- 0.5 GHz
+signal Divisor : integer range 0 to freq_counter;
 signal CLKo : STD_LOGIC;
 -- La definición de la variable Divisor se
 -- definición de la Arquitectura
@@ -21,7 +23,7 @@ begin
  begin
 
 if (Clk'event and Clk='1') then
-    if(Divisor = 100)then 
+    if(Divisor = freq_counter)then 
         Divisor<=0;
         CLKo <= not CLKo;
     else

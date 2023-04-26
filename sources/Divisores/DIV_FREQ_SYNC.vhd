@@ -1,0 +1,16 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity DIV_FREQ is
+    port(
+        clk : in std_logic;
+        clk_16K : out std_logic;
+        clk_1K : out std_logic;
+        clk_250: out std_logic;
+        clk_125: out std_logic;
+    );
+end DIV_FREQ;
+
+architecture Behavioral of DIV_FREQ is
+
+    end architecture;
