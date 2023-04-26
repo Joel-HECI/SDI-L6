@@ -4,7 +4,9 @@ use IEEE.std_logic_1164.all;
 entity main is
     port(
         --I/O R2
-        s: in std_logic;
+        s0: in std_logic;
+        --I/O U1
+        s1: in std_logic;
         --I/O W5
         clk: in std_logic;
         -- I/O T1
@@ -13,11 +15,14 @@ entity main is
         clk_o: out std_logic;
         --I/O L1 P1 N3 P3
         q_out: out std_logic_vector(3 downto 0)
-
-        clk_16khz: in std_logic
-        clk_1khz: in std_logic
-        clk_250hz: in std_logic
-        clk_125: in std_logic
+        --I/O W2 R3 T2 T3
+        d_PISO_in: in std_logic_vector(3 downto 0);
+        --I/O W17 w16 v16 v17
+        q_reg_out: out std_logic_vector(3 downto 0);
+        clk_16khz: out std_logic
+        clk_1khz: out std_logic
+        clk_250hz: out std_logic
+        clk_125hz: out std_logic
     );
 end entity;
 
@@ -28,7 +33,7 @@ architecture Behavioral of main is
     begin
 
     mux: entity work.mux2a1 port map(
-        s => s,
+        s => s0,
         IA => q_as_out,
         IB => q_des_out,
         y => q_out
@@ -77,6 +82,14 @@ architecture Behavioral of main is
     );
     
 -- P5 Registros
+
+    reg_PISO: entity work.SR_PAR_SER port map (
+        clk => clk_05hz,
+        s=>s1,
+        r => rst,
+        d => d_PISO_in,
+        q => q_reg_out
+    );
 
     end architecture; 
 
