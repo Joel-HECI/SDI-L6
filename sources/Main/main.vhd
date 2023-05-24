@@ -16,24 +16,24 @@ entity main is
         --I/O L1 P1 N3 P3
         q_out: out std_logic_vector(3 downto 0);
         --I/O W2 R3 T2 T3
-        d_PISO_in: in std_logic_vector(3 downto 0);
+        d_PISO_in, d_SIPO_in: in std_logic_vector(3 downto 0);
+        --I/O V2
+        d_PIPO_in: in std_logic;
         --I/O W17 w16 v16 v17
         q_reg_out: out std_logic_vector(3 downto 0);
+        
         clk_16khz: out std_logic;
         clk_1khz: out std_logic;
         clk_250hz: out std_logic;
         clk_125hz: out std_logic;
-
-        q_reg_out: out std_logic_vector(3 downto 0)
+        
     );
 end entity;
 
 architecture Behavioral of main is
 
     signal clk_05hz : std_logic := '0';
-    signal q_as_out, q_des_out: std_logic_vector(3 downto 0);
-    signal d_PIPO_in, d_SIPO_in: std_logic;
-    signal d_PISO_in: std_logic_vector(3 downto 0);
+    signal q_as_out, q_des_out: std_logic_vector(3 downto 0);signal d_PIPO_in, d_SIPO_in: std_logic;signal d_PISO_in: std_logic_vector(3 downto 0);
     signal q_reg_PISO,q_reg_SIPO, q_reg_PIPO : std_logic_vector(3 downto 0);
     begin
 

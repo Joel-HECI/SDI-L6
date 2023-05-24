@@ -30,16 +30,13 @@ begin
     begin
         if rising_edge(clk) and ebl='1' then
          
-            if qa='0' and t='0' then
-                qa<='0';
-            elsif qa='0' and t='1' then
-                qa<='1';
-            elsif qa='1' and t='0' then
-                qa<='1';
-            elsif qa='1' and t='1' then
-                qa<='0';
+            if qa='0'
+            qa<=t;
+            else
+            qa<=not t;
             end if;
-        elsif rising_edge(clk) and ebl='1' and rst='1' then  
+        elsif rising_edge(clk) and ebl='1' and rst='1' then 
+        qa<='0';
      end if;
     end process;
 
